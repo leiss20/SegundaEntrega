@@ -144,7 +144,7 @@ Se documenta al menos una **iteración de mejora** (cambio de `top_k`).
 
 ## Repositorio
 
-https://github.com/<tu-usuario>/Avance2_RAG
+https://github.com/leiss20/SegundaEntrega.git
 
 ---
 *Avance 2 — Desarrollo de un Asistente Experto basado en RAG*  
