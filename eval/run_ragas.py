@@ -9,13 +9,18 @@ Uso:
 
 import os
 import json
+import sys
 import argparse
+import unittest.mock as mock
 from pathlib import Path
 from datetime import datetime
 
 import pandas as pd
 from dotenv import load_dotenv
 from datasets import Dataset
+
+sys.modules["langchain_community.chat_models.vertexai"] = mock.MagicMock() 
+sys.modules["langchain_community.llms.vertexai"] = mock.MagicMock()
 
 from ragas import evaluate
 from ragas.metrics import (
@@ -27,7 +32,7 @@ from ragas.metrics import (
 from ragas.llms import LangchainLLMWrapper
 from ragas.embeddings import LangchainEmbeddingsWrapper
 
-import sys
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src.rag_chain import (
     rag_pipeline,
@@ -36,6 +41,7 @@ from src.rag_chain import (
     get_llm,
     TOP_K,
 )
+
 
 load_dotenv()
 
