@@ -140,7 +140,7 @@ Se documenta al menos una **iteración de mejora** (cambio de `top_k`).
 
 ## URL pública
 
-> *Pendiente de despliegue — colocar aquí la URL.*
+> *https://segundaentrega-kt8falpwttzfwzkxgwkzsq.streamlit.app/*
 
 ## Repositorio
 
