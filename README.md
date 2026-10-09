@@ -121,7 +121,7 @@ streamlit run app/streamlit_app.py
    ```
    GROQ_API_KEY = "gsk_..."
    ```
-4. La URL pública quedará: `https://<nombre>-<usuario>.streamlit.app`
+4. La URL pública quedará: `https://segundaentregakt8falpwttzfwzkxgwkzsq.streamlit.app/`
 
 > Si el índice Chroma no se sube, regenera con `python -m src.ingest` en un paso de build o al arranque.
 
@@ -136,7 +136,11 @@ Conjunto de **18 preguntas** (incluye casos fuera de alcance para medir alucinac
 | context_precision | Precisión de los chunks recuperados |
 | context_recall | Cobertura del ground truth por los chunks |
 
-Se documenta al menos una **iteración de mejora** (cambio de `top_k`).
+Baseline (top_k=4): faithfulness 0.375 · answer_relevancy 0.564 · context_precision 0.347 · context_recall 0.333 (la más baja; cuello de botella en recuperación/chunking).
+
+Iteración (top_k=6): answer_relevancy subió a 0.885 (+0.32); context_precision bajó a 0.167. Faithfulness y context_recall no fueron calculables (NaN) en ese run.
+
+Se documenta la comparación antes/después y propuestas de mejora (priorizar .md, reducir chunk size, re-ranking) en el PDF de entrega. Resultados en eval/results/.
 
 ## URL pública
 
