@@ -1,0 +1,92 @@
+[
+  {
+    "question": "¿Cómo inicializo un repositorio Git nuevo?",
+    "ground_truth": "Se usa el comando git init en el directorio deseado. Esto crea la carpeta .git que almacena el historial.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Cómo creo una nueva rama y me cambio a ella en un solo paso?",
+    "ground_truth": "Se puede usar git checkout -b <nombre-rama> o git switch -c <nombre-rama>.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "Hice cambios locales y al hacer git push me rechaza porque el remoto tiene commits nuevos. ¿Qué debo hacer?",
+    "ground_truth": "Ejecutar git pull --rebase origin <rama>, resolver conflictos si hay, continuar el rebase y luego git push.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "Quiero descartar todos mis cambios locales no confirmados de forma irreversible. ¿Qué comando uso?",
+    "ground_truth": "git reset --hard HEAD. Advertencia: es irreversible y se pierden los cambios no confirmados.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Cuál es la diferencia entre git fetch y git pull?",
+    "ground_truth": "git fetch solo descarga los cambios del remoto sin integrarlos. git pull hace fetch + merge (o rebase si se usa --rebase).",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Cómo creo un tag anotado para una release?",
+    "ground_truth": "git tag -a v1.0.0 -m \"mensaje de la versión\". Luego se puede subir con git push origin v1.0.0 o --tags.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Qué es el rebase interactivo y para qué sirve?",
+    "ground_truth": "Se ejecuta con git rebase -i. Permite editar, reordenar, combinar (squash) o eliminar commits del historial.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Cómo puedo ver el historial de commits de forma compacta?",
+    "ground_truth": "git log --oneline o git log --graph --oneline --all.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "Quiero quitar un archivo del área de staging pero mantener los cambios en el directorio de trabajo.",
+    "ground_truth": "git reset HEAD <archivo> o git restore --staged <archivo>.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Cómo elimino un tag remoto?",
+    "ground_truth": "git push origin --delete <nombre-tag>.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Cómo integro Git con Jenkins para CI/CD?",
+    "ground_truth": "No encuentro esa información en la base de conocimiento proporcionada.",
+    "is_out_of_scope": true
+  },
+  {
+    "question": "¿Cómo configuro GitHub Actions para correr tests en cada push?",
+    "ground_truth": "No encuentro esa información en la base de conocimiento proporcionada.",
+    "is_out_of_scope": true
+  },
+  {
+    "question": "¿Qué es un submodule de Git y cómo se añade?",
+    "ground_truth": "No encuentro esa información en la base de conocimiento proporcionada.",
+    "is_out_of_scope": true
+  },
+  {
+    "question": "¿Cómo hago un squash de varios commits usando rebase interactivo?",
+    "ground_truth": "Usar git rebase -i HEAD~N, marcar los commits con squash (o s) y guardar. Luego se edita el mensaje combinado.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "Después de un git reset --hard, ¿puedo recuperar los cambios de alguna forma?",
+    "ground_truth": "A veces se puede usando git reflog para encontrar el hash anterior y luego git checkout o git reset a ese hash, pero no es garantizado.",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Cómo listo todas las ramas incluyendo las remotas?",
+    "ground_truth": "git branch -a",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Qué comando uso para aplicar un commit específico de otra rama?",
+    "ground_truth": "git cherry-pick <hash-commit>",
+    "is_out_of_scope": false
+  },
+  {
+    "question": "¿Cómo limpio archivos no rastreados del directorio de trabajo?",
+    "ground_truth": "git clean -fd. Se recomienda primero hacer git clean -fdn para ver qué se eliminaría.",
+    "is_out_of_scope": false
+  }
+]
