@@ -9,6 +9,7 @@ langchain-groq>=0.2.0
 # Embeddings locales + vector store
 sentence-transformers>=3.0.0
 chromadb>=0.5.0
+torchvision
 
 # Evaluación
 ragas>=0.2.0
