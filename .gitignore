@@ -9,7 +9,6 @@ __pycache__/
 *.egg-info/
 dist/
 build/
-chroma_db/
 eval/results/
 .DS_Store
 *.log
