@@ -107,7 +107,36 @@ def get_embeddings():
     )
 
 
+def _index_is_ready() -> bool:
+    """Comprueba si el índice Chroma existe y tiene documentos."""
+    if not PERSIST_DIR.exists():
+        return False
+    try:
+        embeddings = get_embeddings()
+        vs = Chroma(
+            persist_directory=str(PERSIST_DIR),
+            embedding_function=embeddings,
+            collection_name=COLLECTION_NAME,
+        )
+        return vs._collection.count() > 0
+    except Exception:
+        return False
+
+
+def ensure_index():
+    """
+    Si el índice no existe (típico en Streamlit Cloud porque chroma_db/
+    está en .gitignore), lo construye automáticamente.
+    """
+    if _index_is_ready():
+        return
+    from src.ingest import main as run_ingest
+    print("[rag_chain] Índice no encontrado o vacío. Ejecutando ingesta...")
+    run_ingest()
+
+
 def get_vectorstore():
+    ensure_index()
     embeddings = get_embeddings()
     vs = Chroma(
         persist_directory=str(PERSIST_DIR),

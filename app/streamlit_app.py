@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 load_dotenv(ROOT / ".env")
 
-from src.rag_chain import query, parse_json_safe, TOP_K
+from src.rag_chain import query, parse_json_safe, TOP_K, ensure_index, _index_is_ready
 
 st.set_page_config(
     page_title="SoporteGit — Asistente RAG",
@@ -31,6 +31,24 @@ st.caption(
     "Asistente experto de soporte técnico basado en RAG · Manuales de Git  \n"
     "Embeddings locales (Sentence Transformers) · LLM Groq · ChromaDB"
 )
+# Construir el índice automáticamente si no existe (necesario en Streamlit Cloud)
+if "index_ready" not in st.session_state:
+    if not _index_is_ready():
+        with st.spinner(
+            "⏳ Primera ejecución: construyendo el índice vectorial "
+            "(descarga del modelo de embeddings + indexado de los manuales). "
+            "Esto puede tardar 1-2 minutos. No cierres la pestaña..."
+        ):
+            try:
+                ensure_index()
+                st.session_state.index_ready = True
+                st.success("✅ Índice listo. Ya puedes hacer preguntas.")
+                st.rerun()
+            except Exception as e:
+                st.error(f"Error al construir el índice: {e}")
+                st.stop()
+    else:
+        st.session_state.index_ready = True
 
 with st.sidebar:
     st.header("Acerca de")
