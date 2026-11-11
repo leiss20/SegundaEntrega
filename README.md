@@ -265,24 +265,5 @@ python parte2_audio/asistente_voz.py
 | 3 | A | Con ruido | Tengo un conflicto de merge en main.py, ¿cómo lo resuelvo? |
 | 4 | B | Sin ruido | ¿Qué hace git cherry-pick y cuándo se usa? |
 
-## Límites (Groq)
-
-- **Visión:** máx. 3 imágenes por solicitud, 20 MB total  
-- **Audio:** hasta 25 MB por archivo (plan gratuito)
-
-## Seguridad
-
-- Nunca subas el archivo `.env`
-- `.env` ya está en `.gitignore`
-
-## Evaluación del taller
-
-| Criterio | Puntos |
-|----------|--------|
-| 1. Preguntas sobre imágenes (1.1 y 1.3) | 7.5 |
-| 2. Extracción estructurada (1.2) | 12.5 |
-| 3. Error provocado (1.4) | 5 |
-| 4. Transcripción desde archivo (2.1) | 12.5 |
-| 5. Respuesta a partir de transcripción (2.2) | 12.5 |
 | **Total** | **50** |
 
