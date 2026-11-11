@@ -1,0 +1,11 @@
+Coloca aquí al menos 5 imágenes del dominio Git (.png o .jpg).
+
+Ejemplos recomendados:
+1. Captura de terminal con "git status"
+2. Listado de ramas (git branch -a)
+3. Mensaje de conflicto de merge
+4. git log --oneline
+5. Pull Request o tags en GitHub
+6. (opcional) git rebase en progreso
+
+Luego borra este archivo LEEME.txt.

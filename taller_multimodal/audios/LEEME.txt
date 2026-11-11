@@ -1,0 +1,14 @@
+Coloca aquí al menos 4 audios cortos (10-30 segundos) en formato .wav o .mp3.
+
+Recomendaciones:
+- Al menos 2 hablantes distintos
+- Uno de los audios con ruido de fondo
+- Usar términos técnicos de Git
+
+Ejemplos de preguntas:
+1. ¿Cómo deshago el último commit que aún no he subido con push?
+2. ¿Qué diferencia hay entre git merge y git rebase?
+3. Tengo un conflicto de merge en el archivo main.py, ¿cómo lo resuelvo?
+4. ¿Qué hace el comando git cherry-pick y cuándo se usa?
+
+Luego borra este archivo LEEME.txt.
