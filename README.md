@@ -248,22 +248,23 @@ python parte2_audio/asistente_voz.py
 | `buscar_concepto_git` | Conflictos, merge vs rebase, deshacer commit, push rechazado |
 | `advertir_comando_peligroso` | Avisa de comandos destructivos |
 
-## Imágenes recomendadas (mínimo 5)
+## Imágenes utilizadas (`imagenes/`)
 
-1. `git status` con archivos modificados  
-2. Listado de ramas (`git branch -a`)  
-3. Mensaje de conflicto de merge  
-4. `git log --oneline`  
-5. Pull Request o tags en GitHub  
+1. `Captura de pantalla 2026-11-10 165336.png` — Guía rápida de configuración, staging y commits en Git.
+2. `Captura de pantalla 2026-11-10 171849.png` — Terminal en rama `newbranch` ejecutando `git status` y `git add *`.
+3. `Git.png` — Tabla *Git Cheat Sheet* con comandos básicos y gestión de ramas.
+4. `Imagen.jpg` — Documento de referencia *"Más de 100 comandos para GitHub / Git que deberías conocer"*.
+5. `iniciarGit.jpg` — Terminal con inicialización de repositorio, commit inicial y `git push -u origin main`.
 
-## Audios recomendados (mínimo 4)
+## Audios utilizados (`audios/`)
 
-| # | Hablante | Condición  | Pregunta de ejemplo |
-|---|----------|------------|---------------------|
-| 1 | A | Sin ruido | ¿Cómo deshago el último commit que aún no he subido? |
-| 2 | B | Sin ruido | ¿Qué diferencia hay entre git merge y git rebase? |
-| 3 | A | Con ruido | Tengo un conflicto de merge en main.py, ¿cómo lo resuelvo? |
-| 4 | B | Sin ruido | ¿Qué hace git cherry-pick y cuándo se usa? |
+| Archivo | Hablante | Condición | Duración | Tema de la consulta |
+| :--- | :--- | :--- | :---: | :--- |
+| `Audio 1.mp4` | Integrante 1 | Con ruido de fondo | 17 s | Corregir mensaje del último commit (`--amend`) y riesgo de `reset --hard`. |
+| `Audio 2.mp4` | Integrante 1 | Con ruido de fondo | 15 s | Subir un proyecto local a un repositorio en GitHub paso a paso. |
+| `Audio 3.mp4` | Integrante 1 | Con ruido de fondo | 25 s | Historia lineal antes de Pull Request (`merge` vs `rebase`) y riesgos en ramas compartidas. |
+| `Audio 4.mp4` | Integrante 2 | Sin ruido de fondo | 18 s | Crear una nueva rama en Git y cambiar a ella sin afectar `main`. |
+| `Audio 5.mp4` | Integrante 2 | Con ruido de fondo | 11 s | Funcionamiento de `git cherry-pick` y resolución de conflictos. |
 
-| **Total** | **50** |
+*(Nota: En `2_respuesta_desde_transcripcion.py`, los archivos `Audio 4.mp4` y `Audio 5.mp4` evalúan `cherry-pick` y creación de rama respectivamente).*
 
